@@ -19,7 +19,10 @@ from django.urls import path
 from myapp import views
 
 urlpatterns = [
-    path('', views.inicio, name="inicio"),
     path("admin/", admin.site.urls),
+    path('', views.inicio, name="inicio"),
     path('inicio/',views.inicio, name="inicio"),
+    path('primos/',views.es_primo,name="primos"),
+    path('primos/<int:a>',views.es_primo,name="primos"),
+    path('primos/<int:a>/<int:b>',views.es_primo,name="primos"),
 ]
