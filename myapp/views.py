@@ -20,3 +20,5 @@ def es_primo(request,a=0,b=100):
 
     return render(request,'primos.html',{'primos':primos,'a':a,'b':b})
 
+def examen(request):
+    return render(request, "examen.html")
